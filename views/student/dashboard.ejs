@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/public/output.css" />
+  </head>
+  <body>
+    <main class="h-screen grid grid-cols-5">
+      <%- include('./partials/aside')%>
+      <section
+        class="h-screen w-auto right-0 col-span-4 bg-slate-300 text-white px-10 py-20"
+      >
+        <div>
+          <h1 class="text-3xl text-align left text">
+            Welcome to SIWES Log Book.!
+          </h1>
+
+          <div>
+            <% if (user.isAuthenticated) { %>
+            <p>Let me tell you a secret: <b>I am an admin</b></p>
+            <% } %>
+            <img
+              src="/images/image_1.jpg"
+              alt=""
+              class="h-32 w-32 object-cover rounded-full mx-auto"
+            />
+
+            <div class="mx-32 my-5 grid grid-cols-2 gap-5">
+              <div class="flex items-center space-x-5 text-black">
+                <p class="font-bold">Name:</p>
+                <p><%= user.name %></p>
+              </div>
+              <div class="flex items-center space-x-5 text-black">
+                <p class="font-bold">Reg Number:</p>
+                <p><%= user.username %></p>
+              </div>
+              <div class="flex items-center space-x-5 text-black">
+                <p class="font-bold">Faculty:</p>
+                <p>Computing</p>
+              </div>
+              <div class="flex items-center space-x-5 text-black">
+                <p class="font-bold">Programme of Study</p>
+                <p>Software Engineering</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

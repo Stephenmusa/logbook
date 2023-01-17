@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/public/output.css">
+</head>
+<body>
+  <main class="h-screen grid grid-cols-5">
+    <%- include('./partials/aside')%>
+    <section class="h-screen w-auto right-0 col-span-4 bg-slate-300 text-black px-10 py-20">
+     <div class="px-4">
+      <h1 class="mb-6 text-xl text-black">Weekly Report</h1>
+     <div class="flex flex-col">
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
+      <div class="overflow-hidden">
+        <table class="min-w-full text-center">
+          <thead class="border-b bg-gray-50">
+            <tr class="bg-green-700">
+              <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                Days
+              </th>
+              <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                Activity
+              </th>
+              <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                
+                Photos
+              </th>
+            </tr>
+          </thead class="border-b">
+          <tbody>
+            <% report.reports.forEach(function(reports){ %>
+          <tr class="bg-white border-b">
+          
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+               <%= reports.date %>
+             
+              </td>
+           
+              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+               <%= reports.report %>
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+               <img src="uploads/<%=reports.image%>" width="100" height="100">
+              </td>
+              
+          </tr class="bg-white border-b">
+           
+          <% })%>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<form class="my-4">
+<div>
+  <button class="w-full p-2 my-3 text-white bg-green-800 rounded cursor-pointer hover:bg-green-500 outline-none" type="submit">Submit</button>
+</div>
+</form>
+        </div>
+    </section>
+  </main>
+</body>
+</html>

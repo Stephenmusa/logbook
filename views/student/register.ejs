@@ -1,0 +1,47 @@
+<div>
+  <link rel="stylesheet" href="/output.css" />
+  <div class="h-screen flex justify-center items-center transition-all duration-150 ease-in">
+    <div class="bg-gray-100 w-[500px] place-self-center rounded-xl p-8 text-sm relative">
+      <form action="/register" class="font-semibold mt-4 mb-0" method="post" id="register">
+          <div class="flex flex-col gap-2 mb-2">
+              <label for="fname">Student Name</label>
+              <input type="text" required name="name" id="nameid" class="px-3 py-2 outline-none border">
+          </div>
+          <div class="flex flex-col gap-2 mb-2">
+            <label for="reg">Registration Number</label>
+            <input type="text" name="username" id="regid" class="px-3 py-2 outline-none border" placeholder="FCP/CSC/../.." required>
+        </div>
+        <div class="flex flex-col gap-2 mb-2">    
+          <label for="password">Password</label>
+          <input type="password" name="password" id="passwordid" class="px-3 py-2 outline-none border" placeholder="**************" required>
+      </div>
+          <div class="flex flex-col gap-2 mb-2">    
+            <label for="email">Email</label>
+            <input type="email" name="email" id="emailid" class="px-3 py-2 outline-none border" required>
+        </div>
+         <div class="flex flex-col gap-2 mb-2">
+              <label for="institution">Name of Institution Attached</label>
+              <input type="text" name="institution" id="institutionid" class="px-3 py-2 outline-none border" required>
+          </div>
+        <div class="grid grid-cols-2 gap-2">
+    	<div class="col-span-1 flex flex-col gap-2 mb-2">    
+            <label for="phone_no">Phone Number</label>
+            <input type="text" name="phone_no" id="phone_noid" class="px-3 py-2 outline-none border" required>
+        </div>
+        <div class="col-span-1 flex flex-col gap-2 mb-2">    
+            <label for="text">Session</label>
+            <input type="text" name="session" id="sessionid" class="px-3 py-2 outline-none border" required>
+        </div>
+        </div>
+          <button
+              class="bg-green-600 py-2 px-5 w-full rounded-xl hover:bg-[#13716f] font-bold text-white my-3">Register</button>
+      </form>
+      <p>Already have an account? <a href="/login"><span class="text-blue-400">Click here</span></a></p>
+    </div>
+  </div>
+<script src="./index.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+
+</body>
+
+</html>  

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/public/output.css">
+</head>
+<body>
+  <main class="h-screen grid grid-cols-5">
+    <%- include('./partials/aside')%>
+    <section class="h-screen w-auto right-0 col-span-4 bg-slate-300 text-black px-10 py-20">
+     <div>
+      <form action="/elogbook" method="post" enctype="multipart/form-data" class="px-8 py-6">
+        <h1 class="text-xl my-6 text-center">Daily Report</h1> 
+    <div class="grid grid-cols-2">
+        <div class="col-span-1">
+            <div class="my-6">
+        <label class="block mb-2 text-sm font-medium text-gray-900" for="name">Select date</label>
+        <input type="date" name="date" class="p-3 bg-slate-100 w-48 border rounded cursor-pointer  focus:outline-none ">
+    </div>
+      <div class="mt-6">
+          <label class="block mb-2 text-sm font-medium text-gray-900" for="file_input">Upload file</label>
+          <input class="block p-3 w-48 text-sm text-black bg-slate-100 border rounded cursor-pointer  focus:outline-none id="file_input" type="file" name="image">
+        </div>
+        </div>
+      <div class="col-span-1">
+             <label class="block mb-2 text-sm font-medium text-gray-900" for="name">Activity</label>
+             <textarea name="report" class="block p-3 text-black bg-slate-100 border rounded  focus:outline-none" rows="8" cols="40"></textarea>
+        </div>
+      </div>
+      <button class="w-full p-2 my-6 text-white bg-green-800 rounded cursor-pointer hover:bg-green-500 outline-none" type="submit">Submit</button>
+      </form>
+     </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<div>
+
+  <link rel="stylesheet" href="/output.css" />
+
+  <div class="h-screen flex justify-center items-center transition-all duration-150 ease-in">
+    <div class="bg-gray-100 w-[500px] place-self-center rounded-xl p-10 text-sm relative">
+      <form action="/login" class="font-semibold mt-4 mb-0" method="post">
+          <div class="flex flex-col gap-2 mb-2">
+              <label for="reg">Registration Number</label>
+              <input type="text" name="username" id="reg" class="px-3 py-2 outline-none border" placeholder="FCP/CSC/../.." required>
+          </div>
+          <div class="flex flex-col gap-2 mb-2">    
+            <label for="password">Password</label>
+            <input type="text" name="password" id="reg" class="px-3 py-2 outline-none border" placeholder="**************" required>
+        </div>
+          <button
+              class="bg-green-600 py-2 px-5 w-full rounded-xl hover:bg-[#13716f] font-bold text-white my-3">Login</button>
+      </form>
+      <p>Don't have an account? <a href="/register"><span class="text-blue-400">Click here</span></a></p>
+    </div>
+  </div>
+<script src="./index.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+
+
+</body>
+
+</html>  
